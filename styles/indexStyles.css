@@ -1,0 +1,148 @@
+/* Reset básico y variables */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #e67e22;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+header.scrolled {
+    padding: 0.5rem 5%;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-left: 20px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.navegacion a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Banner */
+.container-banner {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin-bottom: 3rem;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.container-banner:hover .banner {
+    transform: scale(1.05);
+}
+
+/* Categorias */
+.container-categories-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.card p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Efectos visuales para las tarjetas */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    color: white;
+}
+
+.card:hover::before {
+    opacity: 0.9;
+}
