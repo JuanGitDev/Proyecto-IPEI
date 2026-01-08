@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navegacion = document.querySelector('.navegacion');
 
     // Efecto de scroll en el header
     window.addEventListener('scroll', () => {
@@ -9,4 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.remove('scrolled');
         }
     });
+
+    // Menú hamburguesa
+    if (menuToggle && navegacion) {
+        menuToggle.addEventListener('click', () => {
+            navegacion.classList.toggle('active');
+        });
+    }
 });

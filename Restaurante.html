@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planify - Restaurante La Plaza</title>
+    <link rel="stylesheet" href="styles/indexStyles.css">
+    <link rel="stylesheet" href="styles/restaurante.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <img class="logo" src="./img/Planify-logo.jpg" alt="Logo">
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <nav class="navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="buscar.html">Buscar Sitios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="sobre_nosotros.html">Sobre Nosotros</a>
+        </nav>
+    </header>
+
+    <section class="hero-carousel">
+        <div class="carousel-track">
+            <!-- Simulamos varias diapositivas con la misma imagen para el ejemplo -->
+            <div class="slide">
+                <img src="./img/jason-leung-poI7DelFiVA-unsplash.jpg" alt="Restaurante Interior">
+            </div>
+            <div class="slide">
+                <img src="./img/jason-leung-poI7DelFiVA-unsplash.jpg" alt="Platos deliciosos">
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Restaurante La Plaza</h1>
+            <p>Experiencia gastronómica única en el corazón de la ciudad</p>
+        </div>
+    </section>
+
+    <main class="restaurant-container">
+        <section class="services">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>🍽️ Menú Degustación</h3>
+                    <p>Disfruta de una experiencia culinaria de 5 tiempos.</p>
+                </div>
+                <div class="service-item">
+                    <h3>🍷 Carta de Vinos</h3>
+                    <p>Selección exclusiva de vinos nacionales e internacionales.</p>
+                </div>
+                <div class="service-item">
+                    <h3>🎉 Eventos Privados</h3>
+                    <p>Salones reservados para tus celebraciones especiales.</p>
+                </div>
+                <div class="service-item">
+                    <h3>🌿 Terraza al Aire Libre</h3>
+                    <p>Ambiente relajado para disfrutar del buen clima.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reservation">
+            <h2>Reserva tu Mesa</h2>
+            <form class="reservation-form">
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="people">Número de Personas</label>
+                    <input type="number" id="people" name="people" min="1" max="20" placeholder="2" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Fecha</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Horario</label>
+                    <select id="time" name="time" required>
+                        <option value="">Selecciona una hora</option>
+                        <option value="13:00">13:00 - Almuerzo</option>
+                        <option value="14:00">14:00 - Almuerzo</option>
+                        <option value="15:00">15:00 - Almuerzo</option>
+                        <option value="20:00">20:00 - Cena</option>
+                        <option value="21:00">21:00 - Cena</option>
+                        <option value="22:00">22:00 - Cena</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="comments">Comentarios Adicionales</label>
+                    <textarea id="comments" name="comments" rows="3" placeholder="Alergias, ocasiones especiales..."></textarea>
+                </div>
+                <div class="form-group full-width">
+                    <button type="submit" class="btn-reserve">Confirmar Reserva</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+</html>

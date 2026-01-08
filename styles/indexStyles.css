@@ -46,6 +46,15 @@ header.scrolled {
     width: auto;
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
 .navegacion a {
     text-decoration: none;
     color: var(--primary-color);
@@ -145,4 +154,34 @@ h2 {
 
 .card:hover::before {
     opacity: 0.9;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navegacion {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--card-bg);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: none;
+    }
+
+    .navegacion.active {
+        display: flex;
+    }
+
+    .navegacion a {
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planify - Buscar Sitios</title>
+    <link rel="stylesheet" href="styles/indexStyles.css">
+    <link rel="stylesheet" href="styles/buscarStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <img class="logo" src="./img/Planify-logo.jpg" alt="Logo">
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <nav class="navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="buscar.html">Buscar Sitios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="sobre_nosotros.html">Sobre Nosotros</a>
+        </nav>
+    </header>
+    <main class="search-container">
+        <aside class="sidebar">
+            <h3>Filtrar Búsqueda</h3>
+            <div class="filter-group">
+                <label for="site-name">Nombre del sitio</label>
+                <input type="text" id="site-name" placeholder="Buscar...">
+            </div>
+            <div class="filter-group">
+                <label for="location">Ubicación</label>
+                <input type="text" id="location" placeholder="Ciudad o zona">
+            </div>
+            <div class="filter-group category-list">
+                <label>Categorías</label>
+                <div><input type="checkbox" id="cat1"><label for="cat1">Categoría 1</label></div>
+                <div><input type="checkbox" id="cat2"><label for="cat2">Categoría 2</label></div>
+                <div><input type="checkbox" id="cat3"><label for="cat3">Categoría 3</label></div>
+            </div>
+        </aside>
+        <section class="results-section">
+            <h2>Resultados</h2>
+            <article class="result-card">
+                <img src="./img/jason-leung-poI7DelFiVA-unsplash.jpg" alt="Restaurante">
+                <div class="result-content">
+                    <h3>Restaurante La Plaza</h3>
+                    <p>Disfruta de la mejor gastronomía local.</p>
+                    <a href="restaurante.html" class="btn-view">Ver Restaurante</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+</html>

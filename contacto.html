@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planify - Contacto</title>
+    <link rel="stylesheet" href="styles/indexStyles.css">
+    <link rel="stylesheet" href="styles/contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <img class="logo" src="./img/Planify-logo.jpg" alt="Logo">
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <nav class="navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="buscar.html">Buscar Sitios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="sobre_nosotros.html">Sobre Nosotros</a>
+        </nav>
+    </header>
+
+    <main class="contact-wrapper">
+        <section class="contact-intro">
+            <h1>Ponte en Contacto</h1>
+            <p>Estamos aquí para responder a tus preguntas y escuchar tus sugerencias.</p>
+        </section>
+
+        <div class="contact-grid">
+            <section class="form-section">
+                <h2>Envíanos un mensaje</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" placeholder="Motivo de tu consulta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                </form>
+            </section>
+
+            <aside class="info-section">
+                <div class="info-card">
+                    <h3>Información de Contacto</h3>
+                    <p><strong>📍 Dirección:</strong><br>Calle Principal 123, Ciudad, País</p>
+                    <p><strong>📞 Teléfono:</strong><br>+34 900 123 456</p>
+                    <p><strong>✉️ Email:</strong><br>info@planify.com</p>
+                    <p><strong>⏰ Horario:</strong><br>Lunes - Viernes: 9:00 - 18:00</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+</html>
